@@ -30,6 +30,31 @@ const App = () => {
     <div className="d-flex flex-column   mt-5">
       <h1 className="align-self-center text-primary mb-3">My Blog</h1>
       <Posts loading={loading} currentPosts={currentPosts} />
+      <div className=" mb-3 button-group align-self-center ">
+        <button
+          onClick={() => setPostsPerPage(5)}
+          type="button"
+          class="mr-2 btn btn-primary"
+        >
+          5 per page
+        </button>
+        <span> </span>
+        <button
+          onClick={() => setPostsPerPage(10)}
+          type="button"
+          class="btn btn-primary"
+        >
+          10 per page
+        </button>
+        <span> </span>
+        <button
+          onClick={() => setPostsPerPage(20)}
+          type="button"
+          class="btn btn-primary"
+        >
+          20 per page
+        </button>
+      </div>
       <Paginations
         currentPage={currentPage}
         postsPerPage={postsPerPage}
